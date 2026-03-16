@@ -11,7 +11,11 @@ The program loads the text, counts word frequencies, and prints basic statistics
 
 <!--  What It Does -->
 - Loads text from a file
-- Counts total words and unique words
+- Converts text to lowercase
+- Removes punctuation
+- Removes common stop words
+- Counts total and unique words
 - Prints the top 10 most common words
-
-More features will be added in Milestone 2 and Milestone 3.
+- Identifies the most frequent long word (8+ letters)
+- Counts how many times the word "utopia" appears
+- Generates a bar chart of the top 10 words
