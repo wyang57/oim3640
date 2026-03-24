@@ -1,3 +1,7 @@
+<!-- Mini Project 2 -->
+
+https://github.com/wyang57/oim3640/tree/main/projects/mp2-text-analysis
+
 <!--  MP2: Text Analysis — Utopia Writing -->
 
 This project analyzes a text file containing my own writing about my utopia concept.  
