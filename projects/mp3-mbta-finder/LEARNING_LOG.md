@@ -8,3 +8,7 @@ I am still unsure how to place a Mapbox map inside an HTML template.
 
 <!-- What I learned:   -->
 Milestone 0 focuses on planning and structure rather than code.
+
+<!-- Commit 2: -->
+<!-- What I worked on: -->
+I added placeholder functions inside the main file to prepare for the API work.
