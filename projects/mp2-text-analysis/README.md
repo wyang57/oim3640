@@ -2,24 +2,21 @@
 
 https://github.com/wyang57/oim3640/tree/main/projects/mp2-text-analysis
 
-<!--  MP2: Text Analysis — Utopia Writing -->
+<!-- MP2 Text Analysis Utopia Writing -->
 
-This project analyzes a text file containing my own writing about my utopia concept.  
-The program loads the text, counts word frequencies, and prints basic statistics.
+This project studies a long piece of writing that describes my utopia. The writing explores ethics and responsibility. It also examines the conditions that support a stable community. The program highlights patterns in the text so readers can understand the ideas that guide this imagined world.
 
-<!--  How to Run -->
-1. Make sure utopia.txt is in the same folder as app.py.
-2. Run the program:
+The project also demonstrates common techniques used in text processing. It shows how Python can prepare text for study. It also shows how Python can measure patterns that appear in language. These steps help beginners see how code interacts with written material.
 
-    python app.py
+<!-- How to Run -->
 
-<!--  What It Does -->
-- Loads text from a file
-- Converts text to lowercase
-- Removes punctuation
-- Removes common stop words
-- Counts total and unique words
-- Prints the top 10 most common words
-- Identifies the most frequent long word (8+ letters)
-- Counts how many times the word "utopia" appears
-- Generates a bar chart of the top 10 words
+Place utopia.txt in the same folder as app.py.  
+Run the program with: python app.py
+
+<!-- What It Does -->
+
+The program loads the text and prepares it for study. It removes punctuation and common filler words. It counts the remaining words and highlights the most frequent ones. It identifies long terms that appear often. It creates a bar chart that shows the top words.
+
+<!-- Purpose -->
+
+My utopia contains many connected ideas. The analysis offers a way to see the central themes without losing the depth of the writing. It also serves as an example of how Python can handle written material. The project gives readers a starting point for understanding the principles that shape the world I describe.
