@@ -7,6 +7,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
+
 def get_coordinates(place):
     key = os.environ.get('MAPBOX_KEY')
     url = f"https://api.mapbox.com/geocoding/v5/mapbox.places/{place}.json"
@@ -19,15 +20,33 @@ def get_coordinates(place):
     except:
         return None
 
-
 def get_nearest_stop(lat, lng):
-    return None
+    key = os.environ.get('MBTA_KEY')
+    url = "https://api-v3.mbta.com/stops"
+    params = {
+        "api_key": key,
+        "filter[latitude]": lat,
+        "filter[longitude]": lng,
+        "sort": "distance",
+        "page[limit]": 1
+    }
+    r = requests.get(url, params=params).json()
+    try:
+        stop = r["data"][0]["attributes"]
+        name = stop["name"]
+        access = stop["wheelchair_boarding"]
+        return name, access
+    except:
+        return None
 
-@app.get("/test")
-def test():
-    result = get_coordinates("Boston")
+@app.get("/test_mbta")
+def test_mbta():
+    coords = get_coordinates("Boston")
+    if coords is None:
+        return "No coordinates"
+    lat, lng = coords
+    result = get_nearest_stop(lat, lng)
     return str(result)
-
 
 @app.get("/")
 def index():

@@ -18,3 +18,9 @@ I added the Mapbox function and a test route to confirm that the API returns coo
 
 <!-- What I learned: -->
 The Mapbox response places longitude before latitude, so I had to reverse the order.
+
+<!-- What I worked on: -->
+I added the MBTA function and a test route to confirm that the API returns the nearest stop.
+
+<!-- What I learned: -->
+The MBTA API sorts by distance when the sort parameter is set to distance.
