@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTA Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <main>
+        <section class="card">
+            <h1>Find the Nearest MBTA Stop</h1>
+            <form action="/result" method="post">
+                <input type="text" name="place" placeholder="Enter a place name" required>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

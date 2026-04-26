@@ -1,0 +1,74 @@
+/* MBTA-Inspired Theme */
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #e8eef5; /* light blue-gray */
+    margin: 0;
+    padding: 40px;
+    color: #003DA5; /* Blue Line */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #003DA5; /* Blue Line */
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #00843D; /* Green Line */
+    border-radius: 4px;
+    width: 260px;
+}
+
+button {
+    padding: 10px 18px;
+    background: #DA291C; /* Red Line */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #A61F17; /* darker red */
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 30px auto;
+    border-left: 8px solid #00843D; /* Green Line accent */
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #003DA5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Optional Mapbox container */
+#map {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 3px solid #003DA5;
+}

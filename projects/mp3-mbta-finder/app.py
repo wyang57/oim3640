@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, request
 from dotenv import load_dotenv
 import os
 import requests
@@ -6,7 +6,6 @@ import requests
 load_dotenv()
 
 app = Flask(__name__)
-
 
 def get_coordinates(place):
     key = os.environ.get('MAPBOX_KEY')
@@ -39,18 +38,31 @@ def get_nearest_stop(lat, lng):
     except:
         return None
 
-@app.get("/test_mbta")
-def test_mbta():
-    coords = get_coordinates("Boston")
-    if coords is None:
-        return "No coordinates"
-    lat, lng = coords
-    result = get_nearest_stop(lat, lng)
-    return str(result)
-
 @app.get("/")
 def index():
-    return "Mini Project 3 — Milestone 0"
+    return render_template("index.html")
+
+@app.post("/result")
+def result():
+    place = request.form.get("place")
+    coords = get_coordinates(place)
+
+    if coords is None:
+        return render_template("result.html", error="Place not found.")
+
+    lat, lng = coords
+    stop = get_nearest_stop(lat, lng)
+
+    if stop is None:
+        return render_template("result.html", error="No nearby stops found.")
+
+    name, access = stop
+    return render_template("result.html",
+                           place=place,
+                           stop=name,
+                           access=access,
+                           lat=lat,
+                           lng=lng)
 
 if __name__ == "__main__":
     app.run(debug=True)

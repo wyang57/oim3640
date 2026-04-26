@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTA Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <main>
+        <section class="card">
+            {% if error %}
+                <h2>{{ error }}</h2>
+            {% else %}
+                <h1>Nearest MBTA Stop to {{ place }}</h1>
+                <dl>
+                    <dt>Stop</dt>
+                    <dd>{{ stop }}</dd>
+                    <dt>Wheelchair Accessible</dt>
+                    <dd>{{ access }}</dd>
+                    <dt>Coordinates</dt>
+                    <dd>{{ lat }}, {{ lng }}</dd>
+                </dl>
+            {% endif %}
+            <a href="/">Search again</a>
+        </section>
+    </main>
+</body>
+</html>
