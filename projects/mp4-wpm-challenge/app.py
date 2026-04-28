@@ -13,6 +13,27 @@ def get_random_sentence():
 def start_timer():
     return time.time()
 
+def calculate_accuracy(target, typed):
+    target_words = target.split()
+    typed_words = typed.split()
+
+    correct = 0
+    for t, u in zip(target_words, typed_words):
+        if t == u:
+            correct += 1
+
+    if len(target_words) == 0:
+        return 0
+
+    return (correct / len(target_words)) * 100
+
+def calculate_wpm(typed, elapsed_seconds):
+    words = len(typed.split())
+    minutes = elapsed_seconds / 60
+    if minutes == 0:
+        return 0
+    return words / minutes
+
 def main():
     print("Welcome to the WPM Challenge.")
     sentence = get_random_sentence()
@@ -27,8 +48,13 @@ def main():
     end = time.time()
     elapsed = end - start
 
-    print("\nTime recorded.")
-    print(f"Seconds: {elapsed:.2f}")
+    accuracy = calculate_accuracy(sentence, user_input)
+    wpm = calculate_wpm(user_input, elapsed)
+
+    print("\nResults:")
+    print(f"Time: {elapsed:.2f} seconds")
+    print(f"Accuracy: {accuracy:.2f}%")
+    print(f"WPM: {wpm:.2f}")
 
 if __name__ == "__main__":
     main()
