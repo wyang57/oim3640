@@ -6,3 +6,9 @@ Created the project folder and added the initial files: main.py, sentences.py, u
 
 What I learned:  
 Milestone 0 is about planning and structure. Setting up the files early makes the later milestones easier to organize.
+
+What I worked on:
+I added the function that selects a random sentence. I also added the timer that starts when the user begins typing.
+
+What I learned:
+How to use the time module in a simple way. I also learned how to structure the program so the user sees the sentence before the timer starts.
