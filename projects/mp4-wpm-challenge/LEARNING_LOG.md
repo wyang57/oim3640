@@ -19,3 +19,8 @@ I added the functions that calculate accuracy and WPM.
 What I learned:
 I learned how to compare the target sentence with the user’s typed version. I also learned how to convert the elapsed time into minutes for the WPM calculation.
 
+What I worked on:
+I added a loop that lets the user run the typing test more than once.
+
+What I learned:
+I learned I could move the test steps into a separate function so the program feels cleaner. This helped me understand how to structure a small program that repeats without restarting the file.

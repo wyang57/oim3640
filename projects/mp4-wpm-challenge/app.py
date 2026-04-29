@@ -34,8 +34,7 @@ def calculate_wpm(typed, elapsed_seconds):
         return 0
     return words / minutes
 
-def main():
-    print("Welcome to the WPM Challenge.")
+def run_test():
     sentence = get_random_sentence()
     print("\nType the following sentence:")
     print(sentence)
@@ -55,6 +54,16 @@ def main():
     print(f"Time: {elapsed:.2f} seconds")
     print(f"Accuracy: {accuracy:.2f}%")
     print(f"WPM: {wpm:.2f}")
+
+def main():
+    print("Welcome to the WPM Challenge.")
+
+    while True:
+        run_test()
+        again = input("\nTry again? (yes/no): ").strip().lower()
+        if again != "yes":
+            print("\nThanks for playing.")
+            break
 
 if __name__ == "__main__":
     main()
