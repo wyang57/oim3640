@@ -1,6 +1,6 @@
 <!-- MP4 WPM Challenge Game -->
 
-This project is a typing speed game that measures how fast and accurately a user can type a displayed sentence. The program calculates WPM, accuracy, and total time, then compares the user's performance to my benchmark of 90 WPM at 100% accuracy.
+This project is a typing speed game that measures how fast and accurately a user can type a displayed sentence. The program calculates WPM, accuracy, and total time, then compares the user's performance to my benchmark of 90 WPM at 100% accuracy. The game includes a replay option so the user can run multiple tests in one session.
 
 <!-- Features -->
 - Random sentence selection
@@ -8,6 +8,7 @@ This project is a typing speed game that measures how fast and accurately a user
 - Character-by-character accuracy scoring
 - Performance comparison with benchmark
 - Humorous feedback messages
+- Option to retry the test
 
 <!-- How to Run -->
 Run the main script:

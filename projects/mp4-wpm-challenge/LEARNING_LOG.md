@@ -24,3 +24,6 @@ I added a loop that lets the user run the typing test more than once.
 
 What I learned:
 I learned I could move the test steps into a separate function so the program feels cleaner. This helped me understand how to structure a small program that repeats without restarting the file.
+
+What I worked on:
+I cleaned the output and made the program easier to read. I updated the README so the project is clear to anyone who runs it.
