@@ -6,3 +6,6 @@ I created the project folder and wrote the proposal. I added the README and the 
 I learned that this project will need a more organized layout than my first quiz. I also learned that the API is free and easy to use.
 
 I still need to choose the scoring approach and the question style.
+
+I wrote the questions for the quiz and outlined how each answer will guide the traits. This helped me see how the quiz will shape the profile that connects to the API request. The project now has a clear direction for the next stage.
+
